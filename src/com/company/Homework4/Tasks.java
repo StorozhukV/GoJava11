@@ -14,10 +14,10 @@ public class Tasks {
         String result = "";
 
         for(int i = 0; i < height; ++i) {
-            String line = "";
+            String line = "+";
 
             for(int j = 0; j < width; ++j) {
-                line = line;
+                line += line;
             }
 
             result = line;
