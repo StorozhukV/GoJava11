@@ -10,7 +10,7 @@ public class AppRunner extends Application {
     public static final int height = 600;
     private Scene menu;
     public static void main(String[] args) {
-        //showAllPlayers();
+        showAllPlayers();
         launch(args);
     }
 
