@@ -5,10 +5,6 @@ import java.text.ParseException;
 import java.util.Date;
 import java.util.LinkedList;
 
-import static homework7.NameOfFruit.KIWI;
-import static homework7.NameOfFruit.LEMON;
-import static homework7.NameOfFruit.MELON;
-
 public class App
 {
     public static void main( String[] args ) throws IOException, ParseException {
@@ -16,11 +12,10 @@ public class App
         store.storage.init();
         /*store.show();*/
         //store.save("./data2.json");
-        //store.getSpoiledFruits(new Date());
 
         Date date = store.parsingDate("09/09/2018");
         System.out.println("========== SPOILED FRUITS ===========");
-        LinkedList<Fruit> spoiledFruits = (LinkedList<Fruit>) store.getSpoiledFruits(date, MELON);
+        LinkedList<Fruit> spoiledFruits = (LinkedList<Fruit>) store.getSpoiledFruits(date, NameOfFruit.MELON);
         for (Fruit fruit : spoiledFruits) {
             System.out.println(fruit);
         }
@@ -30,7 +25,7 @@ public class App
             System.out.println(fruit);
         }
         System.out.println("=========== ADDED FRUITS ============");
-        LinkedList<Fruit> addedFruits = (LinkedList<Fruit>) store.getAddedFruits(date, KIWI);
+        LinkedList<Fruit> addedFruits = (LinkedList<Fruit>) store.getAddedFruits(date, NameOfFruit.KIWI);
         for (Fruit fruit : addedFruits) {
             System.out.println(fruit);
         }
